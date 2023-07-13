@@ -14,7 +14,7 @@ void setup() {
   ringfinger_Servo.attach(9);
   littlefinger_Servo.attach(10);
 
-  pinMode(3, INPUT); //Set port 3 as the input
+  //pinMode(3, INPUT); //Set port 3 as the input
 
 
 }
@@ -22,7 +22,7 @@ void setup() {
 void loop() {
   // put your main code here, to run repeatedly:
   Serial.println(digitalRead(3)+"\n");
-  if (digitalRead(3) == HIGH) {// if port 3 read of voltage is high
+  //if (digitalRead(3) == HIGH) {// if port 3 read of voltage is high
     for (pos = 0; pos <=180; pos+=1){ // for (0,180,1)
       thumb_Servo.write(pos);
       indexfinger_Servo.write(pos);
@@ -40,6 +40,6 @@ void loop() {
       littlefinger_Servo.write(pos);
       delay(15);// unit is ms
     }
-  }
+  //}
 
 }
